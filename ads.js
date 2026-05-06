@@ -7,9 +7,9 @@ console.log("🚀 Quảng cáo trung tâm GitHub đã chạy!!!");
         banner.style.cssText = "text-align:center; margin:20px 0; padding:10px; background:#f8f9fa; border:1px solid #ddd;";
 
         banner.innerHTML = `
-            <a href="https://nhacaimmoo.com/i9/2" target="_blank">
-                <img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" 
-                     style="max-width:100%; height:auto; max-height:300px;" alt="Quảng cáo">
+            <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
+                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" 
+                     style="max-width:75%; height:auto; max-height:300px;" alt="Quảng cáo">
             </a>
         `;
 
