@@ -52,7 +52,7 @@ function injectCSS() {
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            width: 50%;                    /* Thu nhỏ còn 50% */
+            width: 65%;                    /* Thu nhỏ còn 50% */
             max-width: 340px;              /* Giới hạn tối đa */
             background: white;
             border-radius: 12px;
