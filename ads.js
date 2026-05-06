@@ -45,15 +45,15 @@ function injectCSS() {
             display: inline-block;
         }
 
-        /* ================== POPUP (nhỏ 60%) ================== */
+        /* ================== POPUP (thu nhỏ 50%) ================== */
         #custom-popup {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            width: 60%;                    /* Popup chỉ còn 60% chiều rộng */
-            max-width: 380px;              /* Giới hạn tối đa */
+            width: 50%;                    /* Thu nhỏ còn 50% */
+            max-width: 340px;              /* Giới hạn tối đa */
             background: white;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -63,26 +63,26 @@ function injectCSS() {
 
         #custom-popup .popup-close {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background: #000;
             color: white;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             z-index: 10000;
         }
 
         .popup-content {
-            padding: 12px;
+            padding: 10px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-            gap: 10px;
+            gap: 8px;
         }
 
         .popup-content a {
@@ -93,7 +93,7 @@ function injectCSS() {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
     `;
 
@@ -114,4 +114,40 @@ function hienBannerXepChong() {
         <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4"></a></div>
        
         <a href="#" class="close-all" onclick="document.getElementById('floating-stack').style.display='none'; return false;">
-            ✕ Tắt tất cả quảng
+            ✕ Tắt tất cả quảng cáo
+        </a>
+    `;
+    document.body.appendChild(container);
+}
+
+// Tạo Popup
+function hienPopup() {
+    if (document.getElementById('custom-popup')) return;
+
+    const popup = document.createElement('div');
+    popup.id = 'custom-popup';
+    popup.innerHTML = `
+        <div class="popup-close" onclick="this.parentElement.style.display='none'">×</div>
+        
+        <div class="popup-content">
+            <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
+                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" alt="UY88">
+            </a>
+            <a href="https://nhacaimmoo.com/i9/3" target="_blank">
+                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/01/300-x-250.jpg" alt="i9">
+            </a>
+        </div>
+    `;
+
+    document.body.appendChild(popup);
+    
+    // Hiện popup sau 3 giây
+    setTimeout(() => {
+        popup.style.display = 'block';
+    }, 3000);
+}
+
+// Khởi chạy
+injectCSS();
+hienBannerXepChong();
+hienPopup();
