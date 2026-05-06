@@ -45,20 +45,27 @@ function injectCSS() {
             display: inline-block;
         }
 
-        /* ================== NÚT I9BET - HẠ XUỐNG 50px ================== */
+        /* ================== NÚT I9BET & UY88 - CĂN GIỮA + RESPONSIVE ================== */
         #i9bet-fixed-btn {
             position: fixed;
-            top: 100px;
-            right: 20px;
+            top: 100px;                    /* PC */
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 9999;
+            display: flex;
+            flex-wrap: wrap;               /* Tự động xuống dòng */
+            gap: 10px;
+            justify-content: center;
+            width: 90%;
+            max-width: 380px;
         }
 
         #i9bet-fixed-btn .btn {
             background: #0066ff;
             color: white;
             font-weight: bold;
-            font-size: 12px;
-            padding: 10px 26px;
+            font-size: 14px;
+            padding: 11px 24px;
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(0,102,255,0.4);
@@ -67,8 +74,30 @@ function injectCSS() {
         }
 
         #i9bet-fixed-btn .btn:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
             background: #0055dd;
+        }
+
+        #i9bet-fixed-btn .btn-uy88 {
+            background: #ff6600;
+        }
+
+        #i9bet-fixed-btn .btn-uy88:hover {
+            background: #e65c00;
+        }
+
+        /* ================== MOBILE ================== */
+        @media only screen and (max-width: 768px) {
+            #i9bet-fixed-btn {
+                top: 130px !important;
+                width: 95%;
+                gap: 8px;
+            }
+            
+            #i9bet-fixed-btn .btn {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
         }
 
         /* Popup */
@@ -123,17 +152,15 @@ function injectCSS() {
     document.head.appendChild(style);
 }
 
-// Nút I9BET
+// Nút I9BET & UY88
 function hienNutI9BET() {
     if (document.getElementById('i9bet-fixed-btn')) return;
+
     const nut = document.createElement('div');
     nut.id = 'i9bet-fixed-btn';
     nut.innerHTML = `
-        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">
-            UY88 NEW + 88K
-        <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">
-            I9BET +150K
-        </a>
+        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn btn-uy88">UY88 NEW +88K</a>
+        <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">I9BET +150K</a>
     `;
     document.body.appendChild(nut);
 }
@@ -148,7 +175,7 @@ function hienBannerXepChong() {
         <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 2"></a></div>
         <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 3"></a></div>
         <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4"></a></div>
-       
+      
         <a href="#" class="close-all" onclick="document.getElementById('floating-stack').style.display='none'; return false;">
             ✕ Tắt tất cả quảng cáo
         </a>
