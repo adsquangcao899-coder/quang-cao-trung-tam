@@ -1,26 +1,27 @@
-<script>
-// CENTRAL ADS SCRIPT - Dành cho người mới
+// CENTRAL ADS SCRIPT - Phiên bản đơn giản cho người mới
 console.log("🚀 Quảng cáo trung tâm đã chạy!");
 
 (function() {
-    // === BANNER QUẢNG CÁO (bạn thay link và hình sau) ===
     function hienBanner() {
         var banner = document.createElement("div");
-        banner.style.textAlign = "center";
-        banner.style.margin = "15px 0";
+        banner.style.cssText = "text-align:center; margin:20px 0; padding:15px; background:#fff0f0; border:3px solid red; font-size:18px;";
+        
         banner.innerHTML = `
-            <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
-                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" 
-                     style="max-width:100%; height:auto; border:1px solid #ddd;" alt="Quảng cáo">
+            <a href="https://link-quang-cao-cua-ban.com" target="_blank">
+                <strong>🔥 QUẢNG CÁO TEST - BẠN THAY LINK NÀY 🔥</strong><br><br>
+                <img src="https://i.imgur.com/ThayHinhCuaBan.jpg" 
+                     style="max-width:728px; height:auto;" alt="Banner Quảng Cáo">
             </a>
         `;
-        // Thêm banner vào đầu trang web
-        if (document.body) {
-            document.body.insertBefore(banner, document.body.firstChild);
-        }
+        
+        document.body.insertBefore(banner, document.body.firstChild);
+        document.body.appendChild(banner.cloneNode(true));
     }
 
-    // Chạy banner khi trang web load xong
-    window.addEventListener("load", hienBanner);
+    // Chạy banner
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", hienBanner);
+    } else {
+        hienBanner();
+    }
 })();
-</script>
