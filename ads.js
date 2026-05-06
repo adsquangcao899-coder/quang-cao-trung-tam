@@ -45,15 +45,15 @@ function injectCSS() {
             display: inline-block;
         }
 
-        /* ================== POPUP (thu nhỏ 50%) ================== */
+        /* ================== POPUP (65%) ================== */
         #custom-popup {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            width: 65%;                    /* Thu nhỏ còn 50% */
-            max-width: 340px;              /* Giới hạn tối đa */
+            width: 65%;                    /* Đã tăng lên 65% */
+            max-width: 420px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -63,26 +63,26 @@ function injectCSS() {
 
         #custom-popup .popup-close {
             position: absolute;
-            top: 8px;
-            right: 8px;
+            top: 10px;
+            right: 10px;
             background: #000;
             color: white;
-            width: 26px;
-            height: 26px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             z-index: 10000;
         }
 
         .popup-content {
-            padding: 10px;
+            padding: 12px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-            gap: 8px;
+            gap: 10px;
         }
 
         .popup-content a {
@@ -93,7 +93,7 @@ function injectCSS() {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
     `;
 
