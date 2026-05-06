@@ -48,12 +48,12 @@ function injectCSS() {
         /* ================== NÚT I9BET & UY88 - CĂN GIỮA + RESPONSIVE ================== */
         #i9bet-fixed-btn {
             position: fixed;
-            top: 100px;                    /* PC */
+            top: 100px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 9999;
             display: flex;
-            flex-wrap: wrap;               /* Tự động xuống dòng */
+            flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
             width: 90%;
@@ -61,29 +61,22 @@ function injectCSS() {
         }
 
         #i9bet-fixed-btn .btn {
-            background: #0066ff;
+            background: #0066ff;           /* Tất cả nút cùng màu xanh */
             color: white;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 12px;               /* Font-size 12px như yêu cầu */
             padding: 11px 24px;
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(0,102,255,0.4);
             transition: all 0.3s;
             white-space: nowrap;
+            text-align: center;
         }
 
         #i9bet-fixed-btn .btn:hover {
             transform: scale(1.05);
             background: #0055dd;
-        }
-
-        #i9bet-fixed-btn .btn-uy88 {
-            background: #ff6600;
-        }
-
-        #i9bet-fixed-btn .btn-uy88:hover {
-            background: #e65c00;
         }
 
         /* ================== MOBILE ================== */
@@ -92,11 +85,6 @@ function injectCSS() {
                 top: 130px !important;
                 width: 95%;
                 gap: 8px;
-            }
-            
-            #i9bet-fixed-btn .btn {
-                font-size: 13px;
-                padding: 10px 20px;
             }
         }
 
@@ -159,7 +147,7 @@ function hienNutI9BET() {
     const nut = document.createElement('div');
     nut.id = 'i9bet-fixed-btn';
     nut.innerHTML = `
-        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn btn-uy88">UY88 NEW +88K</a>
+        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 NEW +88K</a>
         <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">I9BET +150K</a>
     `;
     document.body.appendChild(nut);
