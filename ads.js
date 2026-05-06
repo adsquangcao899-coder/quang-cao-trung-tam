@@ -19,7 +19,7 @@ function injectCSS() {
         }
 
         .float-banner {
-            width: 100%;
+            width: 70%;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
