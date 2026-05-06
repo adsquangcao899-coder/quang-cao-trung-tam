@@ -64,7 +64,7 @@ function injectCSS() {
             background: #0066ff;
             color: white;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 12px;
             padding: 10px 28px;
             border-radius: 50px;
             text-decoration: none;
