@@ -113,10 +113,9 @@ function hienBannerXepChong() {
     container.id = 'floating-stack';
 
     container.innerHTML = `
-        <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 1"></a></div>
-        <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 2"></a></div>
-        <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 3"></a></div>
-        <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4"></a></div>
+        <div class="popup-15grid" style="display: grid; grid-template-columns: repeat(1,1fr); gap: 1px 1px;">
+        <div><a href="https://nhacaimmoo.com/uy88/1" target="_blank" rel="noopener"><img class="aligncenter wp-image-16 size-full" src="http://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" alt="" width="300" height="250" /></a></div>
+        <div><a href="https://nhacaimmoo.com/i9/3" target="_blank" rel="noopener"><img class="aligncenter wp-image-16 size-full" src="http://nhacaimmoo.com/wp-content/uploads/2026/01/300-x-250.jpg" alt="" width="300" height="250" /></a></div>
         
         <a href="#" class="close-all" onclick="document.getElementById('floating-stack').style.display='none'; return false;">
             ✕ Tắt tất cả quảng cáo
