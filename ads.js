@@ -45,10 +45,10 @@ function injectCSS() {
             display: inline-block;
         }
 
-        /* ================== NÚT I9BET - VỊ TRÍ GIỐNG BUTTON 1 & 2 ================== */
+        /* ================== NÚT I9BET - HẠ XUỐNG 50px ================== */
         #i9bet-fixed-btn {
             position: fixed;
-            top: 65px;
+            top: 50px;           /* Đã hạ xuống 50px như yêu cầu */
             right: 20px;
             z-index: 9999;
         }
@@ -57,8 +57,8 @@ function injectCSS() {
             background: #0066ff;
             color: white;
             font-weight: bold;
-            font-size: 12px;
-            padding: 10px 24px;
+            font-size: 15px;
+            padding: 10px 26px;
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(0,102,255,0.4);
@@ -123,21 +123,22 @@ function injectCSS() {
     document.head.appendChild(style);
 }
 
-// Nút I9BET cố định góc trên bên phải
+// Nút I9BET
 function hienNutI9BET() {
     if (document.getElementById('i9bet-fixed-btn')) return;
-
     const nut = document.createElement('div');
     nut.id = 'i9bet-fixed-btn';
     nut.innerHTML = `
-        <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">
+        <a href="https://nhacaimmoo.com/i9/2" target="_blank" class="btn">
             I9BET +150K
+        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">
+            UY88 NEW + 88K
         </a>
     `;
     document.body.appendChild(nut);
 }
 
-// Banner xếp chồng (giữ nguyên)
+// Banner xếp chồng
 function hienBannerXepChong() {
     if (document.getElementById('floating-stack')) return;
     const container = document.createElement('div');
