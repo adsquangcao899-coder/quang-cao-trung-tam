@@ -52,8 +52,8 @@ function injectCSS() {
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            width: 65%;                    /* Popup chiếm 65% màn hình */
-            max-width: 520px;
+            width: 90%;
+            max-width: 420px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -63,37 +63,40 @@ function injectCSS() {
 
         #custom-popup .popup-close {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background: #000;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
             cursor: pointer;
             z-index: 10000;
         }
 
-        .popup-content {
-            padding: 15px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-            gap: 12px;
-        }
-
-        .popup-content a {
+        #custom-popup img {
+            width: 100%;
+            height: auto;
             display: block;
         }
 
-        .popup-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        .popup-buttons {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .popup-buttons a {
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
         }
     `;
 
@@ -105,18 +108,21 @@ function injectCSS() {
 // Tạo banner xếp chồng
 function hienBannerXepChong() {
     if (document.getElementById('floating-stack')) return;
+
     const container = document.createElement('div');
     container.id = 'floating-stack';
+
     container.innerHTML = `
         <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 1"></a></div>
         <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 2"></a></div>
         <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 3"></a></div>
         <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4"></a></div>
-       
+        
         <a href="#" class="close-all" onclick="document.getElementById('floating-stack').style.display='none'; return false;">
             ✕ Tắt tất cả quảng cáo
         </a>
     `;
+
     document.body.appendChild(container);
 }
 
@@ -128,26 +134,18 @@ function hienPopup() {
     popup.id = 'custom-popup';
     popup.innerHTML = `
         <div class="popup-close" onclick="this.parentElement.style.display='none'">×</div>
+        <div class="popup-15grid" style="display: grid; grid-template-columns: repeat(1,1fr); gap: 1px 1px;">
+        <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
+            <img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" width="300" height="250">
+        <a href="https://nhacaimmoo.com/i9/3" target="_blank">
+            <img src="http://nhacaimmoo.com/wp-content/uploads/2026/01/300-x-250.jpg" width="300" height="250">
+        </a>
         
-        <div class="popup-content">
-            <!-- Hình 1 -->
-            <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
-                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" alt="UY88">
-            </a>
-            
-            <!-- Hình 2 -->
-            <a href="https://nhacaimmoo.com/i9/3" target="_blank">
-                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/01/300-x-250.jpg" alt="i9">
-            </a>
-
-            <!-- Thêm hình 3, 4... sẽ tự xuống dòng -->
-            <!-- <a href="link3" target="_blank"><img src="hinh3.jpg"></a> -->
-        </div>
     `;
 
     document.body.appendChild(popup);
     
-    // Hiện popup sau 3 giây
+    // Hiển thị popup sau 3 giây
     setTimeout(() => {
         popup.style.display = 'block';
     }, 3000);
