@@ -48,7 +48,7 @@ function injectCSS() {
         /* ================== NÚT I9BET - VỊ TRÍ GIỐNG BUTTON 1 & 2 ================== */
         #i9bet-fixed-btn {
             position: fixed;
-            top: 15px;
+            top: 65px;
             right: 20px;
             z-index: 9999;
         }
