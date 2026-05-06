@@ -1,4 +1,4 @@
-// === CENTRAL ADS SCRIPT - BANNER XẾP CHỒNG + POPUP + NÚT I9BET ===
+// === CENTRAL ADS SCRIPT - FULL ADS ===
 console.log("🚀 Quảng cáo trung tâm - Full Ads đã chạy!");
 
 // Inject CSS
@@ -45,35 +45,29 @@ function injectCSS() {
             display: inline-block;
         }
 
-        /* ================== NÚT I9BET DƯỚI HEADER ================== */
-        #i9bet-top-button {
+        /* ================== NÚT I9BET - VỊ TRÍ GIỐNG BUTTON 1 & 2 ================== */
+        #i9bet-fixed-btn {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #ffffff;
-            padding: 8px 0;
-            text-align: center;
-            z-index: 9998;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            display: none;
+            top: 15px;
+            right: 20px;
+            z-index: 9999;
         }
 
-        #i9bet-top-button .btn {
-            display: inline-block;
+        #i9bet-fixed-btn .btn {
             background: #0066ff;
             color: white;
             font-weight: bold;
             font-size: 12px;
-            padding: 10px 28px;
+            padding: 10px 24px;
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(0,102,255,0.4);
             transition: all 0.3s;
+            white-space: nowrap;
         }
 
-        #i9bet-top-button .btn:hover {
-            transform: scale(1.05);
+        #i9bet-fixed-btn .btn:hover {
+            transform: scale(1.08);
             background: #0055dd;
         }
 
@@ -84,7 +78,7 @@ function injectCSS() {
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            width: 70%;
+            width: 65%;
             max-width: 420px;
             background: white;
             border-radius: 12px;
@@ -129,28 +123,21 @@ function injectCSS() {
     document.head.appendChild(style);
 }
 
-// Nút I9BET dưới Header
+// Nút I9BET cố định góc trên bên phải
 function hienNutI9BET() {
-    if (document.getElementById('i9bet-top-button')) return;
+    if (document.getElementById('i9bet-fixed-btn')) return;
 
     const nut = document.createElement('div');
-    nut.id = 'i9bet-top-button';
+    nut.id = 'i9bet-fixed-btn';
     nut.innerHTML = `
         <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">
             I9BET +150K
-        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">
-            UY88 NEW + 88K
         </a>
     `;
     document.body.appendChild(nut);
-    
-    // Hiện nút sau 1 giây
-    setTimeout(() => {
-        nut.style.display = 'block';
-    }, 1000);
 }
 
-// Banner xếp chồng
+// Banner xếp chồng (giữ nguyên)
 function hienBannerXepChong() {
     if (document.getElementById('floating-stack')) return;
     const container = document.createElement('div');
@@ -191,7 +178,7 @@ function hienPopup() {
     }, 3000);
 }
 
-// Khởi chạy tất cả
+// Khởi chạy
 injectCSS();
 hienNutI9BET();
 hienBannerXepChong();
