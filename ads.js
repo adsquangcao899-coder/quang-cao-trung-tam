@@ -1,25 +1,27 @@
-// === CENTRAL ADS SCRIPT - BANNER XẾP CHỒNG ===
-console.log("🚀 Quảng cáo trung tâm - Banner xếp chồng đã chạy!");
+// === CENTRAL ADS SCRIPT - BANNER XẾP CHỒNG 70% ===
+console.log("🚀 Quảng cáo trung tâm - Banner xếp chồng 70% đã chạy!");
 
 // Inject CSS
 function injectCSS() {
     const css = `
         #floating-stack {
             position: fixed;
-            bottom: 10px;
+            bottom: 12px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 9000;
-            width: 90%;
+            width: 100%;
             max-width: 728px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             align-items: center;
+            padding: 0 10px;
         }
 
         .float-banner {
-            width: 70%;
+            width: 70%;                    /* Banner chiếm 70% chiều rộng */
+            max-width: 510px;              /* Giới hạn tối đa cho banner lớn */
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
@@ -27,7 +29,7 @@ function injectCSS() {
         }
 
         .float-banner img {
-            width: 70%;
+            width: 100%;                   /* Hình ảnh đầy banner */
             height: auto;
             display: block;
         }
@@ -35,18 +37,23 @@ function injectCSS() {
         .close-all {
             background: #41007d;
             color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            border-radius: 6px;
             text-decoration: none;
-            font-size: 14px;
-            margin-top: 5px;
+            font-size: 15px;
+            margin-top: 8px;
+            display: inline-block;
         }
 
-        /* Responsive */
+        /* Responsive Mobile */
         @media only screen and (max-width: 600px) {
             #floating-stack {
-                width: 96%;
                 bottom: 8px;
+                padding: 0 8px;
+            }
+            
+            .float-banner {
+                width: 85%;                /* Tăng lên 85% trên mobile cho dễ nhìn */
             }
         }
     `;
@@ -85,7 +92,7 @@ function hienBannerXepChong() {
             </a>
         </div>
 
-         <!-- Banner 4 -->
+        <!-- Banner 4 -->
         <div class="float-banner">
             <a href="https://nhacaimmoo.com/i9/2" target="_blank">
                 <img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4">
