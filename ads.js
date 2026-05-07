@@ -147,7 +147,7 @@ function hienNutI9BET() {
     const nut = document.createElement('div');
     nut.id = 'i9bet-fixed-btn';
     nut.innerHTML = `
-        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 NEW +88K</a>
+        <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 + 188K</a>
         <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">I9BET +150K</a>
     `;
     document.body.appendChild(nut);
