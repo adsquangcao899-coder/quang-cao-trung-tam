@@ -14,7 +14,7 @@ function injectCSS() {
             max-width: 728px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 1px;
             align-items: center;
             padding: 0 10px;
         }
@@ -40,7 +40,7 @@ function injectCSS() {
             padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 9px;
             margin-top: 1px;
             display: inline-block;
         }
