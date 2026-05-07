@@ -90,49 +90,62 @@ function injectCSS() {
 
         /* Popup */
         #custom-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            width: 65%;
-            max-width: 420px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            overflow: hidden;
-            display: none;
-        }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 50%;
+    max-width: 420px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: none;
+}
 
-        #custom-popup .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #000;
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            cursor: pointer;
-            z-index: 10000;
-        }
+#custom-popup .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #000;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10000;
+}
 
-        .popup-content {
-            padding: 12px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-            gap: 10px;
-        }
+/* Nền mờ khi popup hiện */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);     /* Hiệu ứng mờ nền */
+    z-index: 9998;
+    display: none;
+}
 
-        .popup-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+.popup-content {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    gap: 10px;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
     `;
 
     const style = document.createElement('style');
@@ -148,6 +161,9 @@ function hienNutI9BET() {
     nut.id = 'i9bet-fixed-btn';
     nut.innerHTML = `
         <a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 + 188K</a>
+	<a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 + 188K</a>
+	<a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 + 188K</a>
+	<a href="https://nhacaimmoo.com/uy88/1" target="_blank" class="btn">UY88 + 188K</a>
         <a href="https://nhacaimmoo.com/i9/3" target="_blank" class="btn">I9BET +150K</a>
     `;
     document.body.appendChild(nut);
@@ -159,10 +175,10 @@ function hienBannerXepChong() {
     const container = document.createElement('div');
     container.id = 'floating-stack';
     container.innerHTML = `
-        <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 1"></a></div>
-        <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 2"></a></div>
-        <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 3"></a></div>
-        <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="http://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4"></a></div>
+        <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="https://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 1"></a></div>
+        <div class="float-banner"><a href="https://nhacaimmoo.com/uy88/1" target="_blank"><img src="https://nhacaimmoo.com/wp-content/uploads/2026/05/728X90-UY-GTBB.gif" alt="Banner 2"></a></div>
+        <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="https://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 3"></a></div>
+        <div class="float-banner"><a href="https://nhacaimmoo.com/i9/2" target="_blank"><img src="https://nhacaimmoo.com/wp-content/uploads/2025/08/728-90.gif" alt="Banner 4"></a></div>
       
         <a href="#" class="close-all" onclick="document.getElementById('floating-stack').style.display='none'; return false;">
             ✕ Tắt tất cả quảng cáo
@@ -180,10 +196,11 @@ function hienPopup() {
         <div class="popup-close" onclick="this.parentElement.style.display='none'">×</div>
         <div class="popup-content">
             <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
-                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" alt="UY88">
-            </a>
+                <img src="https://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" alt="UY88">
+	    <a href="https://nhacaimmoo.com/uy88/1" target="_blank">
+                <img src="https://nhacaimmoo.com/wp-content/uploads/2026/05/400x300-UY88.gif" alt="UY88">
             <a href="https://nhacaimmoo.com/i9/3" target="_blank">
-                <img src="http://nhacaimmoo.com/wp-content/uploads/2026/01/300-x-250.jpg" alt="i9">
+                <img src="https://nhacaimmoo.com/wp-content/uploads/2026/01/300-x-250.jpg" alt="i9">
             </a>
         </div>
     `;
