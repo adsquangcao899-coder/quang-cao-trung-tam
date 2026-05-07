@@ -41,7 +41,7 @@ function injectCSS() {
             border-radius: 6px;
             text-decoration: none;
             font-size: 15px;
-            margin-top: 8px;
+            margin-top: 1px;
             display: inline-block;
         }
 
