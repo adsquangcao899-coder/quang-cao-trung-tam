@@ -65,7 +65,7 @@ function injectCSS() {
             color: white;
             font-weight: bold;
             font-size: 12px;               /* Font-size 12px như yêu cầu */
-            padding: 11px 24px;
+            padding: 8px 24px;
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(0,102,255,0.4);
